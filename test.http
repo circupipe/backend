@@ -1,0 +1,114 @@
+GET http://localhost:3010/cpu
+Content-Type: application/json; charset=utf-8
+
+### CPU
+POST http://localhost:3010/cpu
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "ADN Black",
+  "watts_consumption": 65,
+  "stock": 10,
+  "image": "fotolog.pic",
+  "platform_id": 1,
+  "socket_id": 1,
+  "frequency": 3.7,
+  "integrated": "alguna"
+}
+
+### RAM
+POST http://localhost:3010/ram
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "doshe ram",
+  "watts_consumption": 15,
+  "stock": 12,
+  "image": "1500.vw",
+  "type_id": 2,
+  "capacity_gb": 16,
+  "speed_mhz": 3200
+}
+
+### MOTHERBOARD
+POST http://localhost:3010/motherboard
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "hola",
+  "watts_consumption": 30,
+  "stock": 7,
+  "image": "willy.ytv",
+  "socket_id": 1,
+  "platform_id": 1,
+  "ram_slots": 4,
+  "ram_type_id": 2
+}
+
+### GRAPHICS CARD
+POST http://localhost:3010/graphics_card
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "Integrada",
+  "watts_consumption": 170,
+  "stock": 6,
+  "image": "imagengrafica.gimp",
+  "ram_type_id": 2,
+  "capacity_gb": 12
+}
+
+### DISK
+POST http://localhost:3010/disk
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "floppy disk de 3.5",
+  "watts_consumption": 5,
+  "stock": 9,
+  "image": "diskete.hdp",
+  "capacity_gb": 1000,
+  "technology_id": 3
+}
+
+### CASE
+POST http://localhost:3010/case_pc
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "gabinete con vidrio",
+  "stock": 11,
+  "image": "transparente.jpg",
+  "colors": "vacio y cansado"
+}
+
+### POWER SUPPLY
+POST http://localhost:3010/power_supply
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "la fuente de loh podereh",
+  "stock": 2,
+  "image": "fotito.svg",
+  "watts": 750,
+  "modular": true,
+  "certification_id": 2
+}
+
+
+### PUT POWER si el producto no existe se esta actualizando igual
+PATCH http://localhost:3010/power_supply/35
+Content-Type: application/json; charset=utf-8
+
+{
+  "product": "Fuente actualizad",
+  "stock": 5,
+  "image": "nueva-imagen.png",
+  "watts": 850,
+  "modular": false,
+  "certification_id": 2
+}
+
+
+### ELIMINAR POR ID ###
+DELETE http://localhost:3010/case_pc/13

@@ -1,0 +1,9 @@
+instalamos dependencias
+npm init -y   
+npm install express -E
+npm install mysql2
+npm install dotenv
+
+poner el type model y el dev en el packaje.json
+ "type":"module",
+ "dev": "node --watch index.js",
